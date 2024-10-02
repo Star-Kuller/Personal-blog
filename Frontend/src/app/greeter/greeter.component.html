@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="inputText">Введите текст:</label>
+    <input
+      type="text"
+      id="inputText"
+      [(ngModel)]="inputText"
+      name="inputText"
+      required
+    />
+  </div>
+  <button type="submit">Отправить</button>
+</form>
+
+<div *ngIf="stringArray.length > 0">
+  <h3>Результат:</h3>
+  <ul>
+    <li *ngFor="let item of stringArray">{{ item }}</li>
+  </ul>
+</div>
+
