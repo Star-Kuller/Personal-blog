@@ -8,18 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Personal blog.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Protos/greet.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/Services/GreeterService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Personal blog/appsettings.json" afterDir="false" />
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Personal blog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Personal blog/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Star-Kuller"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Star-Kuller/Personal-blog",
+    "accountId": "9a59c2ca-b965-4c7b-a6b8-8813170b7820"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -39,6 +42,7 @@
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
 }]]></component>
@@ -148,20 +152,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727822493536</updated>
-      <workItem from="1727822494479" duration="7452000" />
+      <workItem from="1727822494479" duration="11456000" />
     </task>
+    <task id="LOCAL-00001" summary="First steps">
+      <option name="closed" value="true" />
+      <created>1727830215620</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727830215620</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added README.md">
+      <option name="closed" value="true" />
+      <created>1727830296914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727830296914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -169,5 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="First steps" />
+    <MESSAGE value="Added README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README.md" />
   </component>
 </project>

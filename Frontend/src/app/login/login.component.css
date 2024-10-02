@@ -1,0 +1,32 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  gap: 1.5em;
+  margin: 50px;
+}
+
+form{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+form input {
+  width: 100%;
+}
+
+form span {
+  color: var(--gray);
+  text-decoration: underline;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+form button {
+  width: 60%;
+}

@@ -25,11 +25,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/reset.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/google-protobuf/google-protobuf.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -95,11 +94,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/reset.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/google-protobuf/google-protobuf.js"
-            ]
+            "scripts": []
           }
         }
       }

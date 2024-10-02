@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Colors */
+  --background-color: #23242a;
+  --accent: #8264e3;
+  --gray: #858585;
+  --text: #f7f4ff;
+
+  /* Fonts */
+  --H1: 3.5em 'Rubik';
+  --H2: 2.5em 'Rubik';
+  --H3: 2em 'Rubik';
+  --H4: 1.5em 'Rubik';
+  --body1: 1em 'Rubik';
+
+  /* Other */
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/Fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+
+::selection {
+}
+
+html {
+  font-size: 16px
+}
+
+h1 {
+  font: var(--H1);
+  color: var(--accent);
+}
+
+h2 {
+  font: var(--H2);
+  color: var(--accent);
+}
+
+h3 {
+  font: var(--H3);
+  color: var(--accent);
+}
+
+h4 {
+  font: var(--H4);
+  color: var(--accent);
+}
+
+body {
+  font: var(--body1);
+  color: var(--text);
+  background: var(--background-color);
+}
+
+label {
+  font: var(--body1);
+}
+
+button {
+  padding: 5px 0;
+  color: var(--accent);
+  font-size: 1.5em;
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+input {
+  padding: 10px 0;
+  color: var(--text);
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  outline: none;
+  background: transparent;
+}
