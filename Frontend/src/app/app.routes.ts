@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {GreeterComponent} from "./greeter/greeter.component";
+import {GreeterComponent} from "./Components/greeter/greeter.component";
 
 export const routes: Routes = [
   { path: 'test', component: GreeterComponent}

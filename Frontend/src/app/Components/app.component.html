@@ -1,8 +1,10 @@
-<div *ngIf="false">
-  <nav><a>About</a><a>Blog</a><a>Chat</a></nav>
-  <div class="content"></div>
-</div>
 <div *ngIf="true">
+  <nav><a>About</a><a>Blog</a><a>Chat</a></nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="false">
   <div class="content">
     <app-login></app-login>
   </div>

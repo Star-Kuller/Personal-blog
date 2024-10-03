@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {HelloReply, HelloRequest} from "../../generated/greet_pb";
-import {GreeterClient, ServiceError} from "../../generated/greet_pb_service";
+import {HelloReply, HelloRequest} from "../../../generated/greet_pb";
+import {GreeterClient, ServiceError} from "../../../generated/greet_pb_service";
 import {FormsModule} from "@angular/forms";
 import {NgForOf, NgIf} from "@angular/common";
 

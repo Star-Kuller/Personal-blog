@@ -8,10 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Personal blog/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +33,7 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/MyProjects/Personal blog/Frontend/angular.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
@@ -152,7 +150,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727822493536</updated>
-      <workItem from="1727822494479" duration="11456000" />
+      <workItem from="1727822494479" duration="21902000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -170,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727830296914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added login/register component">
+      <option name="closed" value="true" />
+      <created>1727876580240</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727876580240</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +211,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="First steps" />
     <MESSAGE value="Added README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README.md" />
+    <MESSAGE value="Added login/register component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login/register component" />
   </component>
 </project>
