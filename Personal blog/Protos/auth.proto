@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "Personal_blog";
+
+package personalBlog;
+
+service Authorization {
+  rpc login (LoginForm) returns (TokenResponse);
+  rpc register (RegisterForm) returns (TokenResponse);
+}
+
+message LoginForm {
+  string username = 1;
+  string password = 2;
+}
+
+message RegisterForm {
+  string username = 1;
+  string password = 2;
+  string passwordConfirm = 3;
+}
+
+message TokenResponse {
+  string token = 1;
+}

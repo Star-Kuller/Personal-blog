@@ -19,6 +19,7 @@ app.UseCors(b => b
 app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
 app.MapGrpcService<GreeterService>().EnableGrpcWeb();
+app.MapGrpcService<AuthService>().EnableGrpcWeb();
 
 app.MapGet("/",
     () =>

@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
 import {NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {AuthClientService} from "../../Clients/login/auth-client.service";
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-auth',
   standalone: true,
   imports: [
     NgIf,
     FormsModule
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './auth.component.html',
+  styleUrl: './auth.component.css'
 })
-export class LoginComponent {
+export class AuthComponent {
+  constructor(private client : AuthClientService) {
+  }
+
   isLogin = true;
   username = '';
   password = '';
@@ -25,7 +29,7 @@ export class LoginComponent {
   }
 
   login() {
-
+    this.client.login(this.username, this.password)
   }
 
   register() {

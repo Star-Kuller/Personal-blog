@@ -1,4 +1,4 @@
-<div class="login">
+<div class="auth">
   <h1 *ngIf="isLogin">Login</h1>
   <h1 *ngIf="!isLogin">Register</h1>
   <form (ngSubmit)="onSubmit()">
@@ -6,18 +6,23 @@
       type="text"
       placeholder="Username"
       required
-      [(ngModel)]="username"/>
+      [(ngModel)]="username"
+      [ngModelOptions]="{standalone: true}"
+    />
     <input
       type="password"
       placeholder="Password"
       required
-      [(ngModel)]="password"/>
+      [(ngModel)]="password"
+      [ngModelOptions]="{standalone: true}"/>
     <input
       *ngIf="!isLogin"
       type="password"
       placeholder="Password repeat"
       required
-      [(ngModel)]="passwordRepeat"/>
+      [(ngModel)]="passwordRepeat"
+      [ngModelOptions]="{standalone: true}"
+    />
     <span *ngIf="isLogin" (click)="isLogin = !isLogin">Don't have an account? Register now</span>
     <span *ngIf="!isLogin" (click)="isLogin = !isLogin">Already have an account?</span>
     <button type="submit">Login</button>
