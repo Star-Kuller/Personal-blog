@@ -26,15 +26,30 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="MediatR" Version="12.4.1" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
         <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="8.0.8" />
         <PackageReference Include="Microsoft.AspNetCore.Grpc.Swagger" Version="0.8.8" />
         <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.8" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.1.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.0" />
+        <PackageReference Include="System.Security.Claims" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="OptionModels\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PersonalBlog.Core\PersonalBlog.Core.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 using Personal_blog;
 
-namespace Personal_blog.Services;
+namespace PersonalBlog.Api.Services;
 
+[Authorize]
 public class GreeterService(ILogger<GreeterService> logger) : Greeter.GreeterBase
 {
     public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)

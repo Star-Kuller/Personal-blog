@@ -28,6 +28,7 @@ export class AuthClientService extends BaseClientService {
         console.log(err.metadata)
         return;
       }
+      BaseClientService.setJwtToken(response?.getToken() ?? "")
       console.log(`Token: ${response?.getToken()}`)
     });
   }

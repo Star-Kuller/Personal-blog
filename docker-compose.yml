@@ -1,6 +1,6 @@
 ﻿services:
   personal blogpersonalblog:
-    image: personal blogpersonalblog
+    image: PersonalBlog.Api
     build:
       context: .
-      dockerfile: Personal blog/Dockerfile
+      dockerfile: PersonalBlog.Api/Dockerfile
