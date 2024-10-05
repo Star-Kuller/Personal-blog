@@ -2,11 +2,23 @@ syntax = "proto3";
 
 option csharp_namespace = "Personal_blog";
 
+import "Protos/google/api/annotations.proto";
+
 package personalBlog;
 
 service Authorization {
-  rpc login (LoginForm) returns (TokenResponse);
-  rpc register (RegisterForm) returns (TokenResponse);
+  rpc login (LoginForm) returns (TokenResponse){
+    option (google.api.http) = {
+      post: "/v1/authorization/login"
+      body: "*"
+    };
+  };
+  rpc register (RegisterForm) returns (TokenResponse){
+    option (google.api.http) = {
+      post: "/v1/authorization/register"
+      body: "*"
+    };
+  };
 }
 
 message LoginForm {

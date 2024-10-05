@@ -21,10 +21,7 @@ export class AuthClientService extends BaseClientService {
     req.setUsername(username);
     req.setPassword(password);
 
-    const auth = new grpc.Metadata();
-    auth.headersMap["Authorization"] = ['basic Z3JwY3NwcmluZzpncnBjc3ByaW5n'];
-
-    this.client?.login(req, auth, (err: ServiceError | null, response?: TokenResponse | null) => {
+    this.client?.login(req, (err: ServiceError | null, response?: TokenResponse | null) => {
       if (err) {
         console.log(err.message)
         console.log(err.code)

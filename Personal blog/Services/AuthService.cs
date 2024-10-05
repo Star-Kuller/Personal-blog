@@ -9,10 +9,7 @@ public class AuthService(ILogger<AuthService> logger) : Authorization.Authorizat
     public override Task<TokenResponse> login(LoginForm request, ServerCallContext context)
     {
         logger.LogInformation($"User: {request.Username} Password: {request.Password}");
-        foreach (var header in context.RequestHeaders)
-        {
-            logger.LogInformation($"key: {header.Key} value: {header.Value}");
-        }
+        throw new RpcException(new Status(StatusCode.InvalidArgument, "Test1"), "Test1");
         return Task.FromResult(new TokenResponse
         {
             Token = "123"

@@ -7,16 +7,27 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <PublishAot>true</PublishAot>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
     </PropertyGroup>
+    
 
     <ItemGroup>
-        <Protobuf Include="Protos\auth.proto" GrpcServices="Server"/>
-        <Protobuf Include="Protos\greet.proto" GrpcServices="Server"/>
+        <Protobuf Include="Protos/*.proto" GrpcServices="Server"/>
+        <Protobuf Include="Protos/google/api/annotations.proto" GrpcServices="None" />
+        <Protobuf Include="Protos/google/api/http.proto" GrpcServices="None" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Google.Api.CommonProtos" Version="2.16.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.28.2" />
         <PackageReference Include="Grpc.AspNetCore" Version="2.57.0"/>
         <PackageReference Include="Grpc.AspNetCore.Web" Version="2.66.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.66.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="8.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Grpc.Swagger" Version="0.8.8" />
         <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.8" />
     </ItemGroup>
 
