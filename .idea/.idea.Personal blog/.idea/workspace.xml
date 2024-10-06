@@ -13,7 +13,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added database">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241006140437_AddedAccountName.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241006140437_AddedAccountName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/generated/auth_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/generated/auth_pb.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/generated/auth_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/generated/auth_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/generated/greet_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/generated/greet_pb.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/generated/greet_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/generated/greet_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/annotations.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/http.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/greet.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/greet.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +58,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96b22701ce3542d68e66b33c1ae9a14f1e6620/d8/a451a05f/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -59,31 +79,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Personal blog: http.executor": "Run",
-    ".NET Launch Settings Profile.Personal blog: https.executor": "Run",
-    ".NET Launch Settings Profile.PersonalBlog.Api: https.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "google.protobuf.language",
-    "ts.external.directory.path": "C:\\MyProjects\\Personal blog\\Frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Personal blog: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Personal blog: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.PersonalBlog.Api: https.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;google.protobuf.language&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\MyProjects\\Personal blog\\Frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\UserD\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\UserD\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PersonalBlog.Api: https">
     <configuration name="PersonalBlog.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" />
@@ -246,6 +266,7 @@
       <updated>1727822493536</updated>
       <workItem from="1727822494479" duration="21902000" />
       <workItem from="1728081346473" duration="15881000" />
+      <workItem from="1728199976901" duration="16101000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -287,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728097404918</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added database">
+      <option name="closed" value="true" />
+      <created>1728212273783</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728212273784</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +355,8 @@
     <MESSAGE value="Added login/register component" />
     <MESSAGE value="Added swagger and fix access to headers" />
     <MESSAGE value="Added authorization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added authorization" />
+    <MESSAGE value="Added database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

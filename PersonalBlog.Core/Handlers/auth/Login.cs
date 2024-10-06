@@ -1,4 +1,6 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using PersonalBlog.Core.Exception;
 using PersonalBlog.Core.Interfaces;
 using PersonalBlog.Domain;
 
@@ -8,22 +10,22 @@ public class Login
 {
     public class Query : IRequest<string>
     {
-        public string Username { get; set; }
+        public string AccountName { get; set; }
         public string Password { get; set; }
     }
     
-    public class Handler : IRequestHandler<Query, string>
+    public class Handler(ITokenProvider tokenProvider, IPbDbContext context) : IRequestHandler<Query, string>
     {
-        private readonly ITokenProvider _tokenProvider;
-
-        public Handler(ITokenProvider tokenProvider)
-        {
-            _tokenProvider = tokenProvider;
-        }
-
         public async Task<string> Handle(Query request, CancellationToken cancellationToken)
         {
-            return _tokenProvider.GetToken(request.Username, Role.Admin);
+            var user = await context.Users
+                .Where(x => !x.IsBaned && !x.IsDeleted)
+                .FirstOrDefaultAsync(x => x.AccountName == request.AccountName, cancellationToken);
+            
+            if (user is null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+                throw new NotFoundException($"User with same password and account name not found.");
+            
+            return tokenProvider.GetToken(request.AccountName, Role.Admin);
         }
     }
 }

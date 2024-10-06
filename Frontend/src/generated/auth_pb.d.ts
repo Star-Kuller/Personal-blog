@@ -4,8 +4,8 @@
 import * as jspb from "google-protobuf";
 
 export class LoginForm extends jspb.Message {
-  getUsername(): string;
-  setUsername(value: string): void;
+  getAccountname(): string;
+  setAccountname(value: string): void;
 
   getPassword(): string;
   setPassword(value: string): void;
@@ -22,20 +22,20 @@ export class LoginForm extends jspb.Message {
 
 export namespace LoginForm {
   export type AsObject = {
-    username: string,
+    accountname: string,
     password: string,
   }
 }
 
 export class RegisterForm extends jspb.Message {
-  getUsername(): string;
-  setUsername(value: string): void;
+  getName(): string;
+  setName(value: string): void;
+
+  getAccountname(): string;
+  setAccountname(value: string): void;
 
   getPassword(): string;
   setPassword(value: string): void;
-
-  getPasswordconfirm(): string;
-  setPasswordconfirm(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterForm.AsObject;
@@ -49,9 +49,9 @@ export class RegisterForm extends jspb.Message {
 
 export namespace RegisterForm {
   export type AsObject = {
-    username: string,
+    name: string,
+    accountname: string,
     password: string,
-    passwordconfirm: string,
   }
 }
 

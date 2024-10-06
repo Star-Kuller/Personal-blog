@@ -4,7 +4,8 @@ namespace PersonalBlog.Domain;
 
 public class User : UpdatableEntity
 {
-    public string Username { get; set; }
+    public string AccountName { get; set; }
+    public string Name { get; set; }
     public Role Role { get; set; }
     public string PasswordHash { get; set; }
     public bool IsBaned { get; set; }

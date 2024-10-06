@@ -7,6 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="Grpc.Core.Api" Version="2.57.0" />
       <PackageReference Include="MediatR" Version="12.4.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
@@ -16,6 +18,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PersonalBlog.Domain\PersonalBlog.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Extencions\" />
     </ItemGroup>
 
 </Project>

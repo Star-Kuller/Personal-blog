@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {BaseClientService, TOKEN_KEYWORD} from "../base-client.service";
 import {AuthorizationClient} from "../../../generated/auth_pb_service";
 import {ServiceError} from "../../../generated/greet_pb_service";
-import {LoginForm, TokenResponse} from "../../../generated/auth_pb";
+import {LoginForm, RegisterForm, TokenResponse} from "../../../generated/auth_pb";
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class AuthClientService extends BaseClientService {
     this._client = new AuthorizationClient(this.host);
   }
 
-  public login(username : string, password : string)
+  public login(accountName : string, password : string)
   {
     const req = new LoginForm();
-    req.setUsername(username);
+    req.setAccountname(accountName);
     req.setPassword(password);
 
     this._client?.login(req, (err: ServiceError | null, response?: TokenResponse | null) => {
@@ -34,10 +34,11 @@ export class AuthClientService extends BaseClientService {
     });
   }
 
-  public register(username : string, password : string)
+  public register(name : string, accountName : string, password : string)
   {
-    const req = new LoginForm();
-    req.setUsername(username);
+    const req = new RegisterForm();
+    req.setName(name);
+    req.setAccountname(accountName);
     req.setPassword(password);
 
     this._client?.login(req, (err: ServiceError | null, response?: TokenResponse | null) => {

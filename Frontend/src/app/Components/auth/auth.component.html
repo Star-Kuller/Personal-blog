@@ -3,10 +3,18 @@
   <h1 *ngIf="!isLogin">Register</h1>
   <form (ngSubmit)="onSubmit()">
     <input
+      *ngIf="!isLogin"
       type="text"
-      placeholder="Username"
+      placeholder="Display name"
       required
-      [(ngModel)]="username"
+      [(ngModel)]="displayName"
+      [ngModelOptions]="{standalone: true}"
+    />
+    <input
+      type="text"
+      placeholder="Account name"
+      required
+      [(ngModel)]="accountName"
       [ngModelOptions]="{standalone: true}"
     />
     <input
@@ -25,6 +33,6 @@
     />
     <span *ngIf="isLogin" (click)="isLogin = !isLogin">Don't have an account? Register now</span>
     <span *ngIf="!isLogin" (click)="isLogin = !isLogin">Already have an account?</span>
-    <button type="submit">Login</button>
+    <button type="submit">{{ isLogin ? "Login" : "Register" }}</button>
   </form>
 </div>

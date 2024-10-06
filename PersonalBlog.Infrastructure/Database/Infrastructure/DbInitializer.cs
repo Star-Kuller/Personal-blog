@@ -41,7 +41,7 @@ public static class DbInitializer
             var newAdmin = new User
             {
                 Role = Role.Admin,
-                Username = user.Username,
+                AccountName = user.AccountName,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password + user.Salt)
             };
             context.Users.Add(newAdmin);
@@ -49,7 +49,7 @@ public static class DbInitializer
         else
         {
             admin.Role = Role.Admin;
-            admin.Username = user.Username;
+            admin.AccountName = user.AccountName;
             admin.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password + user.Salt);
         }
 
@@ -59,7 +59,8 @@ public static class DbInitializer
     public class AdminUser
     {
         public string? Salt { get; set; }
-        public string Username { get; set; }
+        public string AccountName { get; set; }
+        public string Name { get; set; }
         public string Password { get; set; }
     }
 }

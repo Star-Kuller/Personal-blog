@@ -22,14 +22,14 @@ service Authorization {
 }
 
 message LoginForm {
-  string username = 1;
+  string accountName = 1;
   string password = 2;
 }
 
 message RegisterForm {
-  string username = 1;
-  string password = 2;
-  string passwordConfirm = 3;
+  string Name = 1;
+  string accountName = 2;
+  string password = 3;
 }
 
 message TokenResponse {

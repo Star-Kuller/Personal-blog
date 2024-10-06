@@ -18,7 +18,8 @@ export class AuthComponent {
   }
 
   isLogin = true;
-  username = '';
+  displayName = '';
+  accountName = '';
   password = '';
   passwordRepeat = '';
   onSubmit() {
@@ -29,7 +30,7 @@ export class AuthComponent {
   }
 
   login() {
-    this.client.login(this.username, this.password)
+    this.client.login(this.accountName, this.password)
   }
 
   register() {

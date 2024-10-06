@@ -119,7 +119,7 @@ proto.personalBlog.LoginForm.prototype.toObject = function(opt_includeInstance) 
  */
 proto.personalBlog.LoginForm.toObject = function(includeInstance, msg) {
   var f, obj = {
-    username: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    accountname: jspb.Message.getFieldWithDefault(msg, 1, ""),
     password: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -159,7 +159,7 @@ proto.personalBlog.LoginForm.deserializeBinaryFromReader = function(msg, reader)
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setUsername(value);
+      msg.setAccountname(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -194,7 +194,7 @@ proto.personalBlog.LoginForm.prototype.serializeBinary = function() {
  */
 proto.personalBlog.LoginForm.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getUsername();
+  f = message.getAccountname();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -212,10 +212,10 @@ proto.personalBlog.LoginForm.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional string username = 1;
+ * optional string accountName = 1;
  * @return {string}
  */
-proto.personalBlog.LoginForm.prototype.getUsername = function() {
+proto.personalBlog.LoginForm.prototype.getAccountname = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -224,7 +224,7 @@ proto.personalBlog.LoginForm.prototype.getUsername = function() {
  * @param {string} value
  * @return {!proto.personalBlog.LoginForm} returns this
  */
-proto.personalBlog.LoginForm.prototype.setUsername = function(value) {
+proto.personalBlog.LoginForm.prototype.setAccountname = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -279,9 +279,9 @@ proto.personalBlog.RegisterForm.prototype.toObject = function(opt_includeInstanc
  */
 proto.personalBlog.RegisterForm.toObject = function(includeInstance, msg) {
   var f, obj = {
-    username: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    passwordconfirm: jspb.Message.getFieldWithDefault(msg, 3, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    accountname: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    password: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -320,15 +320,15 @@ proto.personalBlog.RegisterForm.deserializeBinaryFromReader = function(msg, read
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setUsername(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPassword(value);
+      msg.setAccountname(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPasswordconfirm(value);
+      msg.setPassword(value);
       break;
     default:
       reader.skipField();
@@ -359,21 +359,21 @@ proto.personalBlog.RegisterForm.prototype.serializeBinary = function() {
  */
 proto.personalBlog.RegisterForm.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getUsername();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getPassword();
+  f = message.getAccountname();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getPasswordconfirm();
+  f = message.getPassword();
   if (f.length > 0) {
     writer.writeString(
       3,
@@ -384,10 +384,10 @@ proto.personalBlog.RegisterForm.serializeBinaryToWriter = function(message, writ
 
 
 /**
- * optional string username = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.personalBlog.RegisterForm.prototype.getUsername = function() {
+proto.personalBlog.RegisterForm.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -396,16 +396,16 @@ proto.personalBlog.RegisterForm.prototype.getUsername = function() {
  * @param {string} value
  * @return {!proto.personalBlog.RegisterForm} returns this
  */
-proto.personalBlog.RegisterForm.prototype.setUsername = function(value) {
+proto.personalBlog.RegisterForm.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string password = 2;
+ * optional string accountName = 2;
  * @return {string}
  */
-proto.personalBlog.RegisterForm.prototype.getPassword = function() {
+proto.personalBlog.RegisterForm.prototype.getAccountname = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -414,16 +414,16 @@ proto.personalBlog.RegisterForm.prototype.getPassword = function() {
  * @param {string} value
  * @return {!proto.personalBlog.RegisterForm} returns this
  */
-proto.personalBlog.RegisterForm.prototype.setPassword = function(value) {
+proto.personalBlog.RegisterForm.prototype.setAccountname = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string passwordConfirm = 3;
+ * optional string password = 3;
  * @return {string}
  */
-proto.personalBlog.RegisterForm.prototype.getPasswordconfirm = function() {
+proto.personalBlog.RegisterForm.prototype.getPassword = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -432,7 +432,7 @@ proto.personalBlog.RegisterForm.prototype.getPasswordconfirm = function() {
  * @param {string} value
  * @return {!proto.personalBlog.RegisterForm} returns this
  */
-proto.personalBlog.RegisterForm.prototype.setPasswordconfirm = function(value) {
+proto.personalBlog.RegisterForm.prototype.setPassword = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 

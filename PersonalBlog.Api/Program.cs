@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -6,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using PersonalBlog.Api.Services;
 using PersonalBlog.Core.Handlers.auth;
 using PersonalBlog.Core.Interfaces;
+using PersonalBlog.Core.PipelineBehavior;
 using PersonalBlog.Core.Security;
 using PersonalBlog.Infrastructure.Database;
 using PersonalBlog.Infrastructure.Database.Infrastructure;
@@ -27,6 +29,7 @@ builder.Services.AddGrpc().AddJsonTranscoding();
 
 builder.Services.AddMediatR(cfg
     => cfg.RegisterServicesFromAssembly(typeof(Login).Assembly));
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ErrorHandlingBehavior<,>));
 
 builder.Services.Configure<TokenOptions>(builder.Configuration.GetSection("TokenOptions"));
 builder.Services.AddTransient<ITokenProvider, TokenProvider>();
