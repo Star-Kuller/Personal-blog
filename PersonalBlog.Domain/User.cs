@@ -1,0 +1,17 @@
+using PersonalBlog.Domain.Common;
+
+namespace PersonalBlog.Domain;
+
+public class User : UpdatableEntity
+{
+    public string Username { get; set; }
+    public Role Role { get; set; }
+    public string PasswordHash { get; set; }
+    public bool IsBaned { get; set; }
+}
+
+public enum Role
+{
+    Admin = 1,
+    Guest = 2
+}

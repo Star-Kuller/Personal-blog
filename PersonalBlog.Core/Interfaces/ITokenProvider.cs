@@ -1,4 +1,4 @@
-using PersonalBlog.Core.Common;
+using PersonalBlog.Domain;
 
 namespace PersonalBlog.Core.Interfaces;
 

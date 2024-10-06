@@ -1,6 +1,6 @@
 using MediatR;
-using PersonalBlog.Core.Common;
 using PersonalBlog.Core.Interfaces;
+using PersonalBlog.Domain;
 
 namespace PersonalBlog.Core.Handlers.auth;
 

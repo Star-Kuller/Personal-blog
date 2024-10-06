@@ -3,6 +3,8 @@ import {HelloReply, HelloRequest} from "../../../generated/greet_pb";
 import {GreeterClient, ServiceError} from "../../../generated/greet_pb_service";
 import {FormsModule} from "@angular/forms";
 import {NgForOf, NgIf} from "@angular/common";
+import {grpc} from "@improbable-eng/grpc-web";
+import {TOKEN_KEYWORD} from "../../Clients/base-client.service";
 
 @Component({
   selector: 'app-greeter',
@@ -27,9 +29,12 @@ export class GreeterComponent {
       req.setName(this.inputText);
       this.stringArray.push(`Frontend request: ${this.inputText}`);
 
-      client.sayHello(req, (err: ServiceError | null, response: HelloReply | null) => {
+      let metadata = new grpc.Metadata;
+      metadata.headersMap["Authorization"] = [`Bearer ${localStorage.getItem(TOKEN_KEYWORD)}`];
+
+      client.sayHello(req, metadata, (err: ServiceError | null, response: HelloReply | null) => {
         if (err) {
-          this.stringArray.push(`Error: ${err.message}`);
+          this.stringArray.push(`Error! Code: ${err.code}  | Massage: ${err.message}`);
           return;
         }
         this.stringArray.push(`Backend response: ${response?.getMessage()}`);

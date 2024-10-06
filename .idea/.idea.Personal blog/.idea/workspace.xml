@@ -13,44 +13,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/auth.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/annotations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/http.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/greet.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/GreeterService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Common/Roles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ITokenProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/TokenOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/TokenProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/Clients/login/auth-client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/Clients/login/auth-client.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Personal blog.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Personal blog.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Protos/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Protos/auth.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Protos/google/api/annotations.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Protos/google/api/http.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Protos/greet.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Services/AuthService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/Services/GreeterService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +63,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.Personal blog: http.executor": "Run",
     ".NET Launch Settings Profile.Personal blog: https.executor": "Run",
-    ".NET Launch Settings Profile.PersonalBlog.Api: https.executor": "Debug",
+    ".NET Launch Settings Profile.PersonalBlog.Api: https.executor": "Run",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -282,7 +245,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727822493536</updated>
       <workItem from="1727822494479" duration="21902000" />
-      <workItem from="1728081346473" duration="14682000" />
+      <workItem from="1728081346473" duration="15881000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -316,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728090634004</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added authorization">
+      <option name="closed" value="true" />
+      <created>1728097404918</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728097404918</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,39 +325,8 @@
     <MESSAGE value="Added README.md" />
     <MESSAGE value="Added login/register component" />
     <MESSAGE value="Added swagger and fix access to headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added swagger and fix access to headers" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PersonalBlog.Core/Security/TokenOptions.cs</url>
-          <line>7</line>
-          <properties documentPath="C:\MyProjects\Personal blog\PersonalBlog.Core\Security\TokenOptions.cs" containingFunctionPresentation="Property 'Secret'">
-            <startOffsets>
-              <option value="152" />
-            </startOffsets>
-            <endOffsets>
-              <option value="156" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PersonalBlog.Core/Security/TokenOptions.cs</url>
-          <line>9</line>
-          <properties documentPath="C:\MyProjects\Personal blog\PersonalBlog.Core\Security\TokenOptions.cs" containingFunctionPresentation="Property 'SecurityKey'">
-            <startOffsets>
-              <option value="212" />
-            </startOffsets>
-            <endOffsets>
-              <option value="248" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added authorization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

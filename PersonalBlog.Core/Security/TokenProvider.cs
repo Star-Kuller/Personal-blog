@@ -2,8 +2,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using PersonalBlog.Core.Common;
 using PersonalBlog.Core.Interfaces;
+using PersonalBlog.Domain;
 
 namespace PersonalBlog.Core.Security;
 

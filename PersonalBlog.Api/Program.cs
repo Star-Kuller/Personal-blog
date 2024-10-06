@@ -1,11 +1,14 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PersonalBlog.Api.Services;
 using PersonalBlog.Core.Handlers.auth;
 using PersonalBlog.Core.Interfaces;
 using PersonalBlog.Core.Security;
+using PersonalBlog.Infrastructure.Database;
+using PersonalBlog.Infrastructure.Database.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +17,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
 
 builder.Services.AddOptions();
+
+builder.Services.AddDbContext<PbDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.Configure<DbInitializer.AdminUser>(builder.Configuration.GetSection("AdminUser"));
+builder.Services.AddTransient<IPbDbContext, PbDbContext>();
 
 builder.Services.AddGrpc().AddJsonTranscoding();
 
@@ -83,6 +91,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+
 var app = builder.Build();
 
 app.UseRouting();
@@ -112,5 +121,10 @@ app.MapGrpcService<AuthService>().EnableGrpcWeb();
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var logger = services.GetRequiredService<ILogger<Program>>();
+await DbInitializer.InitializeAsync(services);
 
 app.Run();

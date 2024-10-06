@@ -9,7 +9,7 @@ public class AuthService(ILogger<AuthService> logger, IMediator mediator) : Auth
 {
     public override async Task<TokenResponse> login(LoginForm request, ServerCallContext context)
     {
-        logger.LogInformation($"User: {request.Username} Password: {request.Password}");
+        logger.LogInformation("User: {RequestUsername} Password: {RequestPassword}", request.Username, request.Password);
         var query = new Login.Query()
         {
             Username = request.Username,
