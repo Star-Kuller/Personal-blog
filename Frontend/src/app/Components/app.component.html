@@ -1,13 +1,14 @@
-<div *ngIf="true">
+<div *ngIf="isAuthorized">
   <nav><a>About</a><a>Blog</a><a>Chat</a></nav>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 </div>
-<div *ngIf="true">
+<div *ngIf="!isAuthorized">
   <div class="content">
     <app-auth></app-auth>
   </div>
 </div>
 <div class="errors">
+  <!--TODO Add errors and error handler-->
 </div>

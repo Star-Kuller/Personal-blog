@@ -30,9 +30,12 @@ export class AuthComponent {
   }
 
   login() {
-    this.client.login(this.accountName, this.password)
+    this.client.login(this.accountName, this.password);
   }
 
   register() {
+    if(this.password !== this.passwordRepeat)
+      throw Error("Password and repeat password do not match.");
+    this.client.register(this.displayName, this.accountName, this.password);
   }
 }

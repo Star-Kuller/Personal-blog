@@ -1,7 +1,9 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using PersonalBlog.Core.Exception;
 using PersonalBlog.Core.Interfaces;
+using PersonalBlog.Core.Security;
 using PersonalBlog.Domain;
 
 namespace PersonalBlog.Core.Handlers.auth;
@@ -22,7 +24,7 @@ public class Login
                 .Where(x => !x.IsBaned && !x.IsDeleted)
                 .FirstOrDefaultAsync(x => x.AccountName == request.AccountName, cancellationToken);
             
-            if (user is null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+            if (user is null || !BCrypt.Net.BCrypt.EnhancedVerify(request.Password, user.PasswordHash))
                 throw new NotFoundException($"User with same password and account name not found.");
             
             return tokenProvider.GetToken(request.AccountName, Role.Admin);
