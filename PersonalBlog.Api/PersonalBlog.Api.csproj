@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
         <PackageReference Include="Google.Api.CommonProtos" Version="2.16.0" />
         <PackageReference Include="Google.Protobuf" Version="3.28.2" />
         <PackageReference Include="Grpc.AspNetCore" Version="2.57.0"/>

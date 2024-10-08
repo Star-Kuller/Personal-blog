@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,9 @@ builder.Services.AddGrpc().AddJsonTranscoding();
 
 builder.Services.AddMediatR(cfg
     => cfg.RegisterServicesFromAssembly(typeof(Login).Assembly));
+builder.Services.AddValidatorsFromAssembly(typeof(Login).Assembly);
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ErrorHandlingBehavior<,>));
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 builder.Services.Configure<TokenOptions>(builder.Configuration.GetSection("TokenOptions"));
 builder.Services.AddTransient<ITokenProvider, TokenProvider>();
@@ -128,6 +131,15 @@ app.MapGet("/",
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var logger = services.GetRequiredService<ILogger<Program>>();
-await DbInitializer.InitializeAsync(services);
+try
+{
+    await DbInitializer.InitializeAsync(services);
+}
+catch (Exception e)
+{
+    logger.LogError(e.Message);
+    logger.LogError("Database initialization error.");
+    throw;
+}
 
 app.Run();

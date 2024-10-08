@@ -18,6 +18,7 @@
   padding: 7px;
   border: 1px solid #2f2d2d;
   border-radius: 8px;
+  white-space: pre-wrap;
 }
 
 .error {

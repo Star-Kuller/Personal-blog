@@ -37,6 +37,7 @@ export class AuthComponent {
   register() {
     if(this.password !== this.passwordRepeat){
       this._systemMessages.showWarn("Password and repeat password must be identical");
+      return;
     }
     this._client.register(this.displayName, this.accountName, this.password);
   }

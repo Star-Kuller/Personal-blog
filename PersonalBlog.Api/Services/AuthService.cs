@@ -9,24 +9,30 @@ public class AuthService(ILogger<AuthService> logger, IMediator mediator) : Auth
 {
     public override async Task<TokenResponse> login(LoginForm request, ServerCallContext context)
     {
-        logger.LogInformation("User: {RequestUsername} Password: {RequestPassword}", request.AccountName, request.Password);
-        var query = new Login.Query()
+        var query = new Login.Query
         {
             AccountName = request.AccountName,
             Password = request.Password
         };
         
-        return new TokenResponse()
+        return new TokenResponse
         {
             Token = await mediator.Send(query)
         };
     }
 
-    public override Task<TokenResponse> register(RegisterForm request, ServerCallContext context)
+    public override async Task<TokenResponse> register(RegisterForm request, ServerCallContext context)
     {
-        return Task.FromResult(new TokenResponse
+        var query = new Register.Query
         {
-            Token = ""
-        });
+            DisplayName = request.Name,
+            AccountName = request.AccountName,
+            Password = request.Password
+        };
+        
+        return new TokenResponse
+        {
+            Token = await mediator.Send(query)
+        };
     }
 }

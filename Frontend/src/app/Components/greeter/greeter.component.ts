@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms";
 import {NgForOf, NgIf} from "@angular/common";
 import {grpc} from "@improbable-eng/grpc-web";
 import {TOKEN_KEYWORD} from "../../Clients/base-client.service";
+import {RpcError} from "../../Errors/RpcError";
 
 @Component({
   selector: 'app-greeter',
@@ -34,8 +35,8 @@ export class GreeterComponent {
 
       client.sayHello(req, metadata, (err: ServiceError | null, response: HelloReply | null) => {
         if (err) {
-          this.stringArray.push(`Error! Code: ${err.code}  | Massage: ${err.message}`);
-          return;
+          console.log(err.code)
+          throw new RpcError(err.message, err.code, err.metadata)
         }
         this.stringArray.push(`Backend response: ${response?.getMessage()}`);
       });

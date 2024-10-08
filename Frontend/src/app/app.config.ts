@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import {ISystemMessageService} from "./Interfaces/i-system-message-service";
 import {SystemMassageService} from "./Services/SystemMassages/system-massages.service";
-import {GlobalErrorHandler} from "./Services/SystemMassages/global-error-handler.service";
+import {GlobalErrorHandler} from "./Services/GlobalErrorHandler/global-error-handler.service";
 
 export const appConfig: ApplicationConfig = {
   providers: [

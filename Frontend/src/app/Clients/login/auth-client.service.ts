@@ -5,6 +5,7 @@ import {ServiceError} from "../../../generated/greet_pb_service";
 import {LoginForm, RegisterForm, TokenResponse} from "../../../generated/auth_pb";
 import {ISystemMessageService} from "../../Interfaces/i-system-message-service";
 import {grpc} from "@improbable-eng/grpc-web";
+import {RpcError} from "../../Errors/RpcError";
 
 @Injectable({
   providedIn: 'root'
@@ -28,12 +29,10 @@ export class AuthClientService extends BaseClientService {
           this._systemMassages.showInfo(err.message)
           return;
         }
-        throw new Error(err.message)
+        throw new RpcError(err.message, err.code, err.metadata)
       }
       if(response?.getToken())
         localStorage.setItem(TOKEN_KEYWORD, response?.getToken());
-
-      console.log(`Token: ${response?.getToken()}`)
     });
   }
 
@@ -44,17 +43,16 @@ export class AuthClientService extends BaseClientService {
     req.setAccountname(accountName);
     req.setPassword(password);
 
-    this._client?.login(req, (err: ServiceError | null, response?: TokenResponse | null) => {
+    this._client?.register(req, (err: ServiceError | null, response?: TokenResponse | null) => {
       if (err) {
-        console.log(err.message)
-        console.log(err.code)
-        console.log(err.metadata)
-        return;
+        if(err.code == grpc.Code.AlreadyExists){
+          this._systemMassages.showInfo(err.message)
+          return;
+        }
+        throw new RpcError(err.message, err.code, err.metadata)
       }
       if(response?.getToken())
         localStorage.setItem('token', response?.getToken());
-
-      console.log(`Token: ${response?.getToken()}`)
     });
   }
 }
