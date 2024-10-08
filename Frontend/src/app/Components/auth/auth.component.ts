@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {AuthClientService} from "../../Clients/login/auth-client.service";
+import {ISystemMessageService} from "../../Interfaces/i-system-message-service";
 
 @Component({
   selector: 'app-auth',
@@ -14,7 +15,7 @@ import {AuthClientService} from "../../Clients/login/auth-client.service";
   styleUrl: './auth.component.css'
 })
 export class AuthComponent {
-  constructor(private client : AuthClientService) {
+  constructor(private _client : AuthClientService, private _systemMessages: ISystemMessageService) {
   }
 
   isLogin = true;
@@ -30,12 +31,13 @@ export class AuthComponent {
   }
 
   login() {
-    this.client.login(this.accountName, this.password);
+    this._client.login(this.accountName, this.password);
   }
 
   register() {
-    if(this.password !== this.passwordRepeat)
-      throw Error("Password and repeat password do not match.");
-    this.client.register(this.displayName, this.accountName, this.password);
+    if(this.password !== this.passwordRepeat){
+      this._systemMessages.showWarn("Password and repeat password must be identical");
+    }
+    this._client.register(this.displayName, this.accountName, this.password);
   }
 }

@@ -3,14 +3,16 @@ import {BaseClientService, TOKEN_KEYWORD} from "../base-client.service";
 import {AuthorizationClient} from "../../../generated/auth_pb_service";
 import {ServiceError} from "../../../generated/greet_pb_service";
 import {LoginForm, RegisterForm, TokenResponse} from "../../../generated/auth_pb";
+import {ISystemMessageService} from "../../Interfaces/i-system-message-service";
+import {grpc} from "@improbable-eng/grpc-web";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthClientService extends BaseClientService {
   private _client : AuthorizationClient;
-  constructor() {
-    super();
+  constructor(systemMassages : ISystemMessageService) {
+    super(systemMassages);
     this._client = new AuthorizationClient(this.host);
   }
 
@@ -22,10 +24,11 @@ export class AuthClientService extends BaseClientService {
 
     this._client?.login(req, (err: ServiceError | null, response?: TokenResponse | null) => {
       if (err) {
-        console.log(err.message)
-        console.log(err.code)
-        console.log(err.metadata)
-        return;
+        if(err.code == grpc.Code.NotFound){
+          this._systemMassages.showInfo(err.message)
+          return;
+        }
+        throw new Error(err.message)
       }
       if(response?.getToken())
         localStorage.setItem(TOKEN_KEYWORD, response?.getToken());

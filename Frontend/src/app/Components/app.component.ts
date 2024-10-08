@@ -3,6 +3,7 @@ import {RouterOutlet} from '@angular/router';
 import {NgIf} from "@angular/common";
 import {AuthComponent} from "./auth/auth.component";
 import {TOKEN_KEYWORD} from "../Clients/base-client.service";
+import {SystemMassageDisplayerComponent} from "./system-massage-displayer/system-massage-displayer.component";
 
 
 @Component({
@@ -10,6 +11,7 @@ import {TOKEN_KEYWORD} from "../Clients/base-client.service";
     RouterOutlet,
     AuthComponent,
     NgIf,
+    SystemMassageDisplayerComponent,
   ],
   selector: 'app-root',
   standalone: true,
