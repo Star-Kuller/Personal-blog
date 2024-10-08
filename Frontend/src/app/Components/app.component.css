@@ -2,6 +2,9 @@ nav {
   position: absolute;
   top: 2em;
   right: 2em;
+}
+
+ul{
   display: flex;
   gap: 30px;
 }

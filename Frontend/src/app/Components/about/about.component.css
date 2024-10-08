@@ -1,0 +1,16 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about p {
+  max-width: 70%;
+}
+
+.contacts {
+  display: flex;
+  gap: 20px;
+}

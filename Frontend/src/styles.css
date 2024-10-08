@@ -31,21 +31,25 @@ html {
 h1 {
   font: var(--H1);
   color: var(--accent);
+  margin-bottom: 0.25em;
 }
 
 h2 {
   font: var(--H2);
   color: var(--accent);
+  margin-bottom: 0.25em;
 }
 
 h3 {
   font: var(--H3);
   color: var(--accent);
+  margin-bottom: 0.25em
 }
 
 h4 {
   font: var(--H4);
   color: var(--accent);
+  margin-bottom: 0.5em;
 }
 
 body {
@@ -56,6 +60,16 @@ body {
 
 label {
   font: var(--body1);
+}
+
+a {
+  font: var(--body1);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 button {
@@ -73,4 +87,9 @@ input {
   border-bottom: 1px solid var(--accent);
   outline: none;
   background: transparent;
+}
+
+ol, ul {
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
