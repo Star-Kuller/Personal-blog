@@ -14,6 +14,13 @@
         <Protobuf Include="Protos/*.proto" GrpcServices="Server"/>
         <Protobuf Include="Protos/google/api/annotations.proto" GrpcServices="None" />
         <Protobuf Include="Protos/google/api/http.proto" GrpcServices="None" />
+        <Protobuf Update="Protos\blog.proto">
+          <Access>Public</Access>
+          <ProtoCompile>True</ProtoCompile>
+          <CompileOutputs>True</CompileOutputs>
+          <OutputDir>obj\Debug\net8.0\</OutputDir>
+          <Generator>MSBuild:Compile</Generator>
+        </Protobuf>
     </ItemGroup>
 
     <ItemGroup>

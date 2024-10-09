@@ -9,5 +9,15 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasIndex(u => u.AccountName).IsUnique();
+
+        builder.HasMany(u => u.Articles)
+            .WithOne(a => a.Author);
+        builder.HasMany(u => u.ArticleLikes)
+            .WithMany(a => a.Likes);
+        
+        builder.HasMany(u => u.Comments)
+            .WithOne(c => c.Author);
+        builder.HasMany(u => u.CommentLikes)
+            .WithMany(c => c.Likes);
     }
 }

@@ -13,12 +13,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Fix no connection error">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/Entity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Interfaces/IAuthor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Interfaces/IName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241009232904_AddedArticlesAndComments.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241009232904_AddedArticlesAndComments.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/Components/greeter/greeter.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/Components/greeter/greeter.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/Components/not-found/not-found.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/Components/not-found/not-found.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/Components/not-found/not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/Components/not-found/not-found.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/Services/GlobalErrorHandler/global-error-handler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/Services/GlobalErrorHandler/global-error-handler.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/IPbDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/IPbDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Common/UpdatableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/PbDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/PbDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +278,8 @@
       <workItem from="1728081346473" duration="15881000" />
       <workItem from="1728199976901" duration="20938000" />
       <workItem from="1728385008208" duration="33567000" />
-      <workItem from="1728466592757" duration="619000" />
+      <workItem from="1728466592757" duration="2616000" />
+      <workItem from="1728514626459" duration="2966000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -354,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728423952036</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix no connection error">
+      <option name="closed" value="true" />
+      <created>1728467404353</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728467404353</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +422,8 @@
     <MESSAGE value="Added error handling for frontend" />
     <MESSAGE value="Added registration" />
     <MESSAGE value="Added &quot;About&quot; page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;About&quot; page" />
+    <MESSAGE value="Fix no connection error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix no connection error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

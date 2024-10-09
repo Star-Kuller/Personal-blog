@@ -21,22 +21,25 @@ builder.Services.AddCors();
 
 builder.Services.AddOptions();
 
+//Add Database
 builder.Services.AddDbContext<PbDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.Configure<DbInitializer.AdminUser>(builder.Configuration.GetSection("AdminUser"));
 builder.Services.AddTransient<IPbDbContext, PbDbContext>();
 
+//Add gRPC
 builder.Services.AddGrpc().AddJsonTranscoding();
 
+//Add MediatR and pipeline
 builder.Services.AddMediatR(cfg
     => cfg.RegisterServicesFromAssembly(typeof(Login).Assembly));
 builder.Services.AddValidatorsFromAssembly(typeof(Login).Assembly);
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ErrorHandlingBehavior<,>));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
+//Add authorization and authentication
 builder.Services.Configure<TokenOptions>(builder.Configuration.GetSection("TokenOptions"));
 builder.Services.AddTransient<ITokenProvider, TokenProvider>();
-
 builder.Services.AddAuthorizationBuilder()
     .AddPolicy(JwtBearerDefaults.AuthenticationScheme, policy =>
     {
@@ -59,7 +62,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             };
     });
 
-
+//Add swagger
 builder.Services.AddGrpcSwagger();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -97,7 +100,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-
+//Configure API
 var app = builder.Build();
 
 app.UseRouting();
@@ -123,11 +126,13 @@ app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
 app.MapGrpcService<GreeterService>().EnableGrpcWeb();
 app.MapGrpcService<AuthService>().EnableGrpcWeb();
+app.MapGrpcService<BlogService>().EnableGrpcWeb();
 
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
+//Initialization
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
 var logger = services.GetRequiredService<ILogger<Program>>();

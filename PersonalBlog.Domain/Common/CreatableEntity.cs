@@ -1,8 +1,7 @@
 namespace PersonalBlog.Domain.Common;
 
-public abstract class UpdatableEntity
+public abstract class CreatableEntity : Entity
 {
-    public long Id { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime? DeletedAt { get; set; }

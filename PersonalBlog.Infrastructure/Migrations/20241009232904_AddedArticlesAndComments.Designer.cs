@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PersonalBlog.Infrastructure.Database;
@@ -12,9 +13,11 @@ using PersonalBlog.Infrastructure.Database;
 namespace PersonalBlog.Infrastructure.Migrations
 {
     [DbContext(typeof(PbDbContext))]
-    partial class PbDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241009232904_AddedArticlesAndComments")]
+    partial class AddedArticlesAndComments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -9,6 +9,8 @@ namespace PersonalBlog.Infrastructure.Database;
 public class PbDbContext(DbContextOptions options) : DbContext(options), IPbDbContext
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Article> Articles { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -84,13 +86,13 @@ public class PbDbContext(DbContextOptions options) : DbContext(options), IPbDbCo
     {
         var entities = ChangeTracker
             .Entries()
-            .Where(x => x is { Entity: UpdatableEntity, State: EntityState.Added });
+            .Where(x => x is { Entity: CreatableEntity, State: EntityState.Added });
 
         foreach (var entity in entities)
         {
             if (entity.State == EntityState.Added)
             {
-                ((UpdatableEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
+                ((CreatableEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
             }
         }
     }
