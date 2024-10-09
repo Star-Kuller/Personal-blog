@@ -26,7 +26,6 @@ export class GlobalErrorHandler implements ErrorHandler {
       case Code.OutOfRange:
       case Code.NotFound:
       case Code.DataLoss:
-      case Code.Unknown:
       case Code.Aborted:
         this._systemMassages.showError(error.message);
         break;
@@ -37,8 +36,8 @@ export class GlobalErrorHandler implements ErrorHandler {
         this._systemMassages.showWarn(error.message)
         break;
       case Code.PermissionDenied:
-        this._systemMassages.showWarn('No server connection');
-        break;
+        this._systemMassages.showWarn('No access');
+        break
       case Code.Unauthenticated:
         this._systemMassages.showWarn('You need to log in');
         localStorage.removeItem(TOKEN_KEYWORD);
@@ -51,6 +50,9 @@ export class GlobalErrorHandler implements ErrorHandler {
         break;
       case Code.Internal:
         this._systemMassages.showError('Oops... There was a trouble with the servers');
+        break;
+      case Code.Unknown:
+        this._systemMassages.showError('No server connection');
         break;
       case Code.OK:
         this._systemMassages.showInfo(error.message)
