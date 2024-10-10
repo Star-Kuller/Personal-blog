@@ -29,16 +29,6 @@ service Blog {
       put: "/v1/blog/{id}/publish"
     };
   };
-  rpc addFiles (stream FileChunk) returns (Empty) {
-    option (google.api.http) = {
-      put: "/v1/blog/{id}/addFiles"
-    };
-  };
-  rpc publish (IdMassage) returns (Empty) {
-    option (google.api.http) = {
-      put: "/v1/blog/{id}/publish"
-    };
-  };
   rpc delete (IdMassage) returns (Empty){
     option (google.api.http) = {
       delete: "/v1/blog/{id}"
@@ -87,12 +77,14 @@ message ListItem {
   int64 id = 1;
   string title = 2;
   string shortText = 3;
+  bool published = 4;
 }
 
 message GetResponse {
   int64 id = 1;
   string title = 2;
   string text = 3;
+  bool published = 4;
 }
 
 message FileChunk {

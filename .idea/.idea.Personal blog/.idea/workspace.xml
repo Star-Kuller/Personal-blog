@@ -14,14 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added CurrentUser">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exception/PermissionDeniedException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/CurrentUserFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/ICurrentUserFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/JwtDecoderMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/CurrentUserMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exception/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exception/NotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +271,7 @@
       <workItem from="1728385008208" duration="33567000" />
       <workItem from="1728466592757" duration="2616000" />
       <workItem from="1728514626459" duration="3669000" />
-      <workItem from="1728553763500" duration="9578000" />
+      <workItem from="1728553763500" duration="10838000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -386,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728560791945</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added CurrentUser">
+      <option name="closed" value="true" />
+      <created>1728564224060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728564224060</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

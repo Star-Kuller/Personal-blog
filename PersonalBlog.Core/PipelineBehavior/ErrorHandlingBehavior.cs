@@ -19,17 +19,19 @@ public class ErrorHandlingBehavior<TRequest, TResponse>(ILogger<ErrorHandlingBeh
         }
         catch (NotFoundException ex)
         {
-            logger.LogWarning(ex, "Not found error occurred");
             throw new RpcException(new Status(StatusCode.NotFound, ex.Message));
         }
         catch (UnauthorizedAccessException ex)
         {
-            logger.LogWarning(ex, "Unauthorized access error occurred");
             throw new RpcException(new Status(StatusCode.PermissionDenied, ex.Message));
         }
         catch (AlreadyExistException ex)
         {
             throw new RpcException(new Status(StatusCode.AlreadyExists, ex.Message));
+        }
+        catch (PermissionDeniedException ex)
+        {
+            throw new RpcException(new Status(StatusCode.PermissionDenied, ex.Message));
         }
         catch (ValidationException ex)
         {
