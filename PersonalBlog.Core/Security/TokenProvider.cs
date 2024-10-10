@@ -11,9 +11,9 @@ public class TokenProvider(IOptions<TokenOptions> options) : ITokenProvider
 {
     private readonly TokenOptions _options = options.Value;
 
-    public string GetToken(string username, Role role)
+    public string GetToken(string accountName, Role role)
     {
-        if (string.IsNullOrWhiteSpace(username))
+        if (string.IsNullOrWhiteSpace(accountName))
         {
             throw new InvalidOperationException("Name is not specified.");
         }
@@ -22,7 +22,7 @@ public class TokenProvider(IOptions<TokenOptions> options) : ITokenProvider
             _options.Audience,
             new []
             {
-                new Claim(ClaimTypes.Name, username),
+                new Claim(ClaimTypes.Name, accountName),
                 new Claim(ClaimTypes.Role, role.ToString())
             },
             expires: DateTime.Now.AddDays(_options.Lifetime),

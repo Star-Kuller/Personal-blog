@@ -19,6 +19,16 @@ service Blog {
       body: "*"
     };
   };
+  rpc addFiles (stream FileChunk) returns (Empty) {
+    option (google.api.http) = {
+      put: "/v1/blog/{id}/addFiles"
+    };
+  };
+  rpc publish (IdMassage) returns (Empty) {
+    option (google.api.http) = {
+      put: "/v1/blog/{id}/publish"
+    };
+  };
   rpc delete (IdMassage) returns (Empty){
     option (google.api.http) = {
       delete: "/v1/blog/{id}"
@@ -48,7 +58,7 @@ message UpdateRequest {
 }
 
 message IdMassage {
-  string id = 1;
+  int64 id = 1;
 }
 
 message GetListRequest {
@@ -73,6 +83,13 @@ message GetResponse {
   int64 id = 1;
   string title = 2;
   string text = 3;
+}
+
+message FileChunk {
+  int64 articleId = 1;
+  int32 totalChunks = 2;
+  bytes file = 3;
+  string fileType = 4;
 }
 
 message Empty {}
