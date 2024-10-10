@@ -16,7 +16,17 @@ service Blog {
   rpc update (UpdateRequest) returns (Empty){
     option (google.api.http) = {
       put: "/v1/blog/{id}"
-      body: "*"
+      body: "title, text"
+    };
+  };
+  rpc addFiles (stream FileChunk) returns (Empty) {
+    option (google.api.http) = {
+      put: "/v1/blog/{id}/addFiles"
+    };
+  };
+  rpc publish (IdMassage) returns (Empty) {
+    option (google.api.http) = {
+      put: "/v1/blog/{id}/publish"
     };
   };
   rpc addFiles (stream FileChunk) returns (Empty) {
