@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PersonalBlog.Api.Extensions;
 using PersonalBlog.Api.Services;
 using PersonalBlog.Core.Handlers.auth;
 using PersonalBlog.Core.Interfaces;
@@ -61,6 +62,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 IssuerSigningKey = tokenOptions?.SecurityKey
             };
     });
+builder.Services.AddCurrentUser();
 
 //Add swagger
 builder.Services.AddGrpcSwagger();
@@ -120,6 +122,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCurrentUser();
 
 // Configure the HTTP request pipeline.
 app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });

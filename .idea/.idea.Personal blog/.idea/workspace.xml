@@ -13,26 +13,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Fix no connection error">
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/Entity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Interfaces/IAuthor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Interfaces/IName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241009232904_AddedArticlesAndComments.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241009232904_AddedArticlesAndComments.cs" afterDir="false" />
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/CurrentUserFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/ICurrentUserFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/JwtDecoderMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/IPbDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/IPbDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Common/UpdatableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/PbDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/PbDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/BlogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/BlogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ITokenProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ITokenProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Security/TokenProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/TokenProvider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96b22701ce3542d68e66b33c1ae9a14f1e6620/d8/a451a05f/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ebffcd2ab98c3abdcb6c2c350fb49783e75ae2d26c32d1ab7d87c9e84e4/JwtSecurityToken.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -76,7 +71,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -279,7 +274,8 @@
       <workItem from="1728199976901" duration="20938000" />
       <workItem from="1728385008208" duration="33567000" />
       <workItem from="1728466592757" duration="2616000" />
-      <workItem from="1728514626459" duration="2966000" />
+      <workItem from="1728514626459" duration="3669000" />
+      <workItem from="1728553763500" duration="6498000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -377,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728467404353</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added articles and comments">
+      <option name="closed" value="true" />
+      <created>1728518079531</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728518079531</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +427,8 @@
     <MESSAGE value="Added registration" />
     <MESSAGE value="Added &quot;About&quot; page" />
     <MESSAGE value="Fix no connection error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix no connection error" />
+    <MESSAGE value="Added articles and comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added articles and comments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
