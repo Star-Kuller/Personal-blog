@@ -4,7 +4,7 @@ using PersonalBlog.Domain;
 
 namespace PersonalBlog.Core.Security;
 
-public class CurrentUser : ICurrentUser
+public record CurrentUser : ICurrentUser
 {
     public long Id { get; set;  }
     public string Name { get; set;  }

@@ -21,8 +21,4 @@
       <ProjectReference Include="..\PersonalBlog.Domain\PersonalBlog.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Extencions\" />
-    </ItemGroup>
-
 </Project>

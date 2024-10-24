@@ -6,7 +6,7 @@ namespace PersonalBlog.Domain;
 public class Comment : CreatableEntity, IAuthor
 {
     public string Message { get; set; }
-    public List<string> Files { get; set; }
+    public List<string> MediaUrls { get; set; } = new();
     
     public List<User> Likes { get; set; }
     

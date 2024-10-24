@@ -35,7 +35,7 @@ namespace PersonalBlog.Infrastructure.Migrations
 
                     b.HasIndex("LikesId");
 
-                    b.ToTable("ArticleUser");
+                    b.ToTable("ArticleUser", (string)null);
                 });
 
             modelBuilder.Entity("CommentUser", b =>
@@ -50,7 +50,7 @@ namespace PersonalBlog.Infrastructure.Migrations
 
                     b.HasIndex("LikesId");
 
-                    b.ToTable("CommentUser");
+                    b.ToTable("CommentUser", (string)null);
                 });
 
             modelBuilder.Entity("PersonalBlog.Domain.Article", b =>
@@ -77,14 +77,11 @@ namespace PersonalBlog.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsPublished")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Message")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Text")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -92,7 +89,7 @@ namespace PersonalBlog.Infrastructure.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Articles");
+                    b.ToTable("Articles", (string)null);
                 });
 
             modelBuilder.Entity("PersonalBlog.Domain.Comment", b =>
@@ -132,7 +129,7 @@ namespace PersonalBlog.Infrastructure.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("PersonalBlog.Domain.User", b =>
@@ -175,7 +172,7 @@ namespace PersonalBlog.Infrastructure.Migrations
                     b.HasIndex("AccountName")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("ArticleUser", b =>

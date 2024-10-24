@@ -7,7 +7,7 @@ public class Article : CreatableEntity, IName, IAuthor
 {
     public string Name { get; set; }
     public string Text { get; set; }
-    public List<string> Files { get; set; }
+    public List<string> MediaUrls { get; set; } = new();
     public bool IsPublished { get; set; }
     
     public List<User> Likes { get; set; }

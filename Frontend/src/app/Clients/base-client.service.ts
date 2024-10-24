@@ -8,7 +8,7 @@ export class BaseClientService {
 
   host : string = environment.host;
 
-  constructor( protected _systemMassages : ISystemMessageService) {}
+  constructor(protected _systemMassages : ISystemMessageService) {}
 
   protected get defaultMetadata() : grpc.Metadata {
     let metadata = new grpc.Metadata;

@@ -9,6 +9,7 @@ public class User : CreatableEntity, IName
     public string Name { get; set; }
     public Role Role { get; set; }
     public string PasswordHash { get; set; }
+    public string Base64Avatar { get; set; }
     public bool IsBaned { get; set; }
     
     public List<Article> Articles { get; set; }

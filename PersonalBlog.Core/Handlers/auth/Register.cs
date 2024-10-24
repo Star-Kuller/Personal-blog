@@ -9,12 +9,7 @@ namespace PersonalBlog.Core.Handlers.auth;
 
 public class Register
 {
-    public class Query : IRequest<string>
-    {
-        public string DisplayName { get; set; }
-        public string AccountName { get; set; }
-        public string Password { get; set; }
-    }
+    public record Query(string DisplayName, string AccountName, string Password) : IRequest<string>;
     
     public class Validator : AbstractValidator<Query>
     {

@@ -7,84 +7,107 @@ import "Protos/google/api/annotations.proto";
 package personalBlog;
 
 service Blog {
-  rpc create (CreateRequest) returns (IdMassage){
+  rpc create (ArticleCreate) returns (IdMassage){
     option (google.api.http) = {
-      post: "/v1/blog"
+      post: "/v1/article"
       body: "*"
     };
   };
-  rpc update (UpdateRequest) returns (Empty){
+  rpc edit (ArticleEdit) returns (Empty){
     option (google.api.http) = {
-      put: "/v1/blog/{id}"
-      body: "title, text"
+      put: "/v1/article/{id}"
+      body: "*"
     };
   };
   rpc addFiles (stream FileChunk) returns (Empty) {
     option (google.api.http) = {
-      put: "/v1/blog/{id}/addFiles"
+      put: "/v1/article/{id}/addFiles"
     };
   };
   rpc publish (IdMassage) returns (Empty) {
     option (google.api.http) = {
-      put: "/v1/blog/{id}/publish"
+      put: "/v1/article/{id}/publish"
+    };
+  };
+  rpc like (IdMassage) returns (Empty){
+    option (google.api.http) = {
+      put: "/v1/article/{id}/like"
     };
   };
   rpc delete (IdMassage) returns (Empty){
     option (google.api.http) = {
-      delete: "/v1/blog/{id}"
+      delete: "/v1/article/{id}"
     };
   };
-  rpc get (IdMassage) returns (GetResponse){
+  rpc view (IdMassage) returns (ArticleInfo){
     option (google.api.http) = {
-      get: "/v1/blog/{id}"
+      get: "/v1/article/{id}"
     };
   };
-  rpc getList (IdMassage) returns (ListResponse){
+  rpc getPagedList (PagedListQuery) returns (PagedListResult){
     option (google.api.http) = {
-      get: "/v1/blog/list"
+      get: "/v1/articles"
     };
   };
-}
-
-message CreateRequest {
-  string title = 1;
-  string text = 2;
-}
-
-message UpdateRequest {
-  int64 id = 1;
-  string title = 2;
-  string text = 3;
 }
 
 message IdMassage {
   int64 id = 1;
 }
 
-message GetListRequest {
+message PagedListQuery {
   int32 page = 1;
-  int32 pageSize = 2;
-  string Search = 3;
+  int32 size = 2;
 }
 
-message ListResponse {
+message PagedListResult {
   int32 page = 1;
-  int32 pageSize = 2;
-  repeated ListItem list = 3;
+  int32 size = 2;
+  int32 totalPages = 3;
+  int32 rowsCount = 4;
+  repeated ArticleShort items = 5;
 }
 
-message ListItem {
-  int64 id = 1;
-  string title = 2;
-  string shortText = 3;
-  bool published = 4;
+message ArticleCreate{
+  string title = 1;
+  string text = 2;
 }
 
-message GetResponse {
+message ArticleEdit{
   int64 id = 1;
   string title = 2;
   string text = 3;
-  bool published = 4;
+}
+
+message ArticleShort {
+  int64 id = 1;
+  string title = 2;
+  string text = 3;
+  bool liked = 4;
+  int64 likesCount = 5;
+  int64 commentsCount = 6;
+  bool isPublished = 7;
+  int64 authorId = 8;
+}
+
+message ArticleInfo {
+  int64 id = 1;
+  string title = 2;
+  string text = 3;
+  bool isPublished = 4;
+  repeated string mediaUrls = 5;
+  bool liked = 6;
+  int64 likesCount = 7;
+  int64 commentsCount = 8;
+  repeated Comment comments = 9;
+  int64 authorId = 10;
+}
+
+message Comment {
+  int64 authorId = 1;
+  string authorName = 2;
+  string authorAvatar = 3;
+  string message = 4;
 }
 
 message FileChunk {

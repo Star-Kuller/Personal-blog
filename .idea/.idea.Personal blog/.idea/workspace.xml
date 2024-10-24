@@ -13,15 +13,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added CurrentUser">
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exception/PermissionDeniedException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exception/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exception/NotFoundException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +46,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/MyProjects/Personal blog/PersonalBlog.Domain/Article.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/c2a442982e736e17ae6bcadbfd8ccba278ee1be6/src/Http/Http.Features/src/IHeaderDictionary.Keyed.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96b22701ce3542d68e66b33c1ae9a14f1e6620/d8/a451a05f/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ee39d1e9346e41aa9d44f0e1b1c6630f76268/84/49805e62/StringValue.cs" root0="SKIP_HIGHLIGHTING" />
@@ -271,7 +264,7 @@
       <workItem from="1728385008208" duration="33567000" />
       <workItem from="1728466592757" duration="2616000" />
       <workItem from="1728514626459" duration="3669000" />
-      <workItem from="1728553763500" duration="10838000" />
+      <workItem from="1728553763500" duration="11149000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -393,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728564224060</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added blog create">
+      <option name="closed" value="true" />
+      <created>1728565430922</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728565430922</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +442,8 @@
     <MESSAGE value="Fix no connection error" />
     <MESSAGE value="Added articles and comments" />
     <MESSAGE value="Added CurrentUser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CurrentUser" />
+    <MESSAGE value="Added blog create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added blog create" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
