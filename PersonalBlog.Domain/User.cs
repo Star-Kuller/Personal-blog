@@ -3,12 +3,12 @@ using PersonalBlog.Domain.Interfaces;
 
 namespace PersonalBlog.Domain;
 
-public class User : CreatableEntity, IName
+public class User(string accountName, Role role, string passwordHash) : CreatableEntity, IName
 {
-    public string AccountName { get; set; } = "";
-    public string Name { get; set; } = "";
-    public Role Role { get; set; }
-    public string PasswordHash { get; set; } = "";
+    public string AccountName { get; set; } = accountName;
+    public string Name { get; set; } = accountName;
+    public Role Role { get; set; } = role;
+    public string PasswordHash { get; set; } = passwordHash;
     public string? Base64Avatar { get; set; }
     public bool IsBaned { get; set; }
 

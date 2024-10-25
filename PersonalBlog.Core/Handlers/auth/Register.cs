@@ -34,13 +34,13 @@ public class Register
                     , cancellationToken))
                 throw new AlreadyExistException(
                     "This account name is already in use, please choose another one.");
-           
-            var newUser = new User
+
+            var newUser = new User(
+                form.AccountName,
+                Role.Guest,
+                passwordHash: BCrypt.Net.BCrypt.EnhancedHashPassword(form.Password))
             {
-                AccountName = form.AccountName,
                 Name = form.Name,
-                Role = Role.Guest,
-                PasswordHash = BCrypt.Net.BCrypt.EnhancedHashPassword(form.Password)
             };
             context.Users.Add(newUser);
             await context.SaveChangesAsync(cancellationToken);

@@ -31,17 +31,15 @@ public static class DbInitializer
         AdminUser user, CancellationToken cancellationToken = default)
     {
         var admin = await context.Users
-            .Where(u => u.Role == Role.Admin && u.Id == 1)
+            .Where(u => u.Role == Role.Admin)
             .FirstOrDefaultAsync(cancellationToken);
 
         if (admin is null)
         {
-            var newAdmin = new User
-            {
-                Role = Role.Admin,
-                AccountName = user.AccountName,
-                PasswordHash = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password)
-            };
+            var newAdmin = new User(
+                user.AccountName,
+                Role.Admin, 
+                passwordHash: BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password));
             context.Users.Add(newAdmin);
         }
         else
@@ -56,8 +54,8 @@ public static class DbInitializer
     
     public class AdminUser
     {
-        public string AccountName { get; set; }
-        public string Name { get; set; }
-        public string Password { get; set; }
+        public string AccountName { get; set; } = "";
+        public string Name { get; set; } = "";
+        public string Password { get; set; } = "";
     }
 }

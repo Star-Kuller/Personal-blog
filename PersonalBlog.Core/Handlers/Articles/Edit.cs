@@ -33,8 +33,11 @@ public class Edit
                               .WithId(form.Id)
                               .FirstOrDefaultAsync(cancellationToken)
                           ?? throw new NotFoundException(nameof(Article));
+            
             article.Name = form.Title;
             article.Text = form.Text;
+
+            await context.SaveChangesAsync(cancellationToken);
         }
     }
 }
