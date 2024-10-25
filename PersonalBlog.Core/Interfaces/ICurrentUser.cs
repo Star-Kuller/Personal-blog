@@ -11,4 +11,7 @@ public interface ICurrentUser
     public Role Role { get; set; }
     public bool IsDeleted { get; set; }
     public IPAddress? IpAddress { get; set; }
+    
+    public bool IsAdmin { get; }
+    public bool IsGuest { get; }
 }

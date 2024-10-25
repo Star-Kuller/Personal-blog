@@ -1,7 +1,7 @@
 using Grpc.Core;
 using MediatR;
-using Personal_blog;
 using PersonalBlog.Core.Handlers.auth;
+using PersonalBlogGRpc;
 
 namespace PersonalBlog.Api.Services;
 
@@ -9,17 +9,11 @@ public class AuthService(ILogger<AuthService> logger, IMediator mediator) : Auth
 {
     public override async Task<TokenResponse> login(LoginForm request, ServerCallContext context)
     {
-        return new TokenResponse
-        {
-            Token = await mediator.Send(new Login.Query(request.AccountName, request.Password))
-        };
+        return await mediator.Send(new Login.Query(request));
     }
 
     public override async Task<TokenResponse> register(RegisterForm request, ServerCallContext context)
     {
-        return new TokenResponse
-        {
-            Token = await mediator.Send(new Register.Query(request.Name, request.AccountName, request.Password))
-        };
+        return await mediator.Send(new Register.Query(request));
     }
 }

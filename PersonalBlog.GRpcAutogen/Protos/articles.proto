@@ -1,12 +1,19 @@
 syntax = "proto3";
 
-option csharp_namespace = "Personal_blog";
+option csharp_namespace = "PersonalBlogGRpc";
 
 import "Protos/google/api/annotations.proto";
 
 package personalBlog;
 
-service Blog {
+service Articles {
+  // Многостраничный список постов
+  rpc getPagedList (PagedListQuery) returns (PagedListResult){
+    option (google.api.http) = {
+      get: "/v1/articles"
+    };
+  };
+  // CRUD для поста
   rpc create (ArticleCreate) returns (IdMassage){
     option (google.api.http) = {
       post: "/v1/article"
@@ -19,21 +26,6 @@ service Blog {
       body: "*"
     };
   };
-  rpc addFiles (stream FileChunk) returns (Empty) {
-    option (google.api.http) = {
-      put: "/v1/article/{id}/addFiles"
-    };
-  };
-  rpc publish (IdMassage) returns (Empty) {
-    option (google.api.http) = {
-      put: "/v1/article/{id}/publish"
-    };
-  };
-  rpc like (IdMassage) returns (Empty){
-    option (google.api.http) = {
-      put: "/v1/article/{id}/like"
-    };
-  };
   rpc delete (IdMassage) returns (Empty){
     option (google.api.http) = {
       delete: "/v1/article/{id}"
@@ -44,9 +36,30 @@ service Blog {
       get: "/v1/article/{id}"
     };
   };
-  rpc getPagedList (PagedListQuery) returns (PagedListResult){
+  
+  // Работа с файлами
+  rpc uploadFile (stream FileChunk) returns (Empty);
+  rpc removeFile (RemoveFile) returns (Empty) {
     option (google.api.http) = {
-      get: "/v1/articles"
+      delete: "/v1/article/{articleId}/file/remove"
+      body: "*"
+    };
+  };
+  
+  // Прочее
+  rpc publish (IdMassage) returns (Empty) {
+    option (google.api.http) = {
+      put: "/v1/article/{id}/publish"
+    };
+  };
+  rpc like (IdMassage) returns (Empty){
+    option (google.api.http) = {
+      put: "/v1/article/{id}/like"
+    };
+  };
+  rpc unlike (IdMassage) returns (Empty){
+    option (google.api.http) = {
+      put: "/v1/article/{id}/unlike"
     };
   };
 }
@@ -114,7 +127,12 @@ message FileChunk {
   int64 articleId = 1;
   int32 totalChunks = 2;
   bytes file = 3;
-  string fileType = 4;
+  string fileName = 4;
+}
+
+message RemoveFile {
+  int64 articleId = 1;
+  string fileName = 2;
 }
 
 message Empty {}

@@ -8,28 +8,14 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
     </PropertyGroup>
-    
-
-    <ItemGroup>
-        <Protobuf Include="Protos/*.proto" GrpcServices="Server"/>
-        <Protobuf Include="Protos/google/api/annotations.proto" GrpcServices="None" />
-        <Protobuf Include="Protos/google/api/http.proto" GrpcServices="None" />
-        <Protobuf Update="Protos\blog.proto">
-          <Access>Public</Access>
-          <ProtoCompile>True</ProtoCompile>
-          <CompileOutputs>True</CompileOutputs>
-          <OutputDir>obj\Debug\net8.0\</OutputDir>
-          <Generator>MSBuild:Compile</Generator>
-        </Protobuf>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
         <PackageReference Include="Google.Api.CommonProtos" Version="2.16.0" />
-        <PackageReference Include="Google.Protobuf" Version="3.28.2" />
-        <PackageReference Include="Grpc.AspNetCore" Version="2.57.0"/>
+        <PackageReference Include="Google.Protobuf" Version="3.28.3" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
         <PackageReference Include="Grpc.AspNetCore.Web" Version="2.66.0" />
-        <PackageReference Include="Grpc.Tools" Version="2.66.0">
+        <PackageReference Include="Grpc.Tools" Version="2.67.0">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
@@ -54,7 +40,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PersonalBlog.Core\PersonalBlog.Core.csproj" />
+      <ProjectReference Include="..\PersonalBlog.GRpcAutogen\PersonalBlog.GRpcAutogen.csproj" />
       <ProjectReference Include="..\PersonalBlog.Infrastructure\PersonalBlog.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Articles\" />
     </ItemGroup>
 
 </Project>

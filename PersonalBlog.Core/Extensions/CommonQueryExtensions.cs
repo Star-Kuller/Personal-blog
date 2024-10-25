@@ -22,4 +22,10 @@ public static class CommonQueryExtensions
     {
         return query.Where(x => x.AuthorId == id);
     }
+
+    public static IQueryable<T> Count<T>(this IQueryable<T> query, out int count)
+    {
+        count = query.Count();
+        return query;
+    }
 }

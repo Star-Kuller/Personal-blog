@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "Personal_blog";
+option csharp_namespace = "PersonalBlogGRpc";
 
 import "Protos/google/api/annotations.proto";
 

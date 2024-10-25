@@ -3,7 +3,7 @@ using FluentValidation;
 using Grpc.Core;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using PersonalBlog.Core.Exception;
+using PersonalBlog.Core.Exceptions;
 
 namespace PersonalBlog.Core.PipelineBehavior;
 

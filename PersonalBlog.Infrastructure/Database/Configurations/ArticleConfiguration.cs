@@ -15,6 +15,6 @@ public class ArticleConfiguration : IEntityTypeConfiguration<Article>
             .WithOne(c => c.Article);
         
         builder.HasMany(a => a.Likes)
-            .WithMany(u => u.ArticleLikes);
+            .WithMany(u => u.ArticleLiked);
     }
 }

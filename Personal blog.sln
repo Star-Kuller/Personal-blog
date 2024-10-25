@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalBlog.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalBlog.Domain", "PersonalBlog.Domain\PersonalBlog.Domain.csproj", "{1A9364D4-CBB7-4999-B63E-469FDE2E54D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalBlog.GRpcAutogen", "PersonalBlog.GRpcAutogen\PersonalBlog.GRpcAutogen.csproj", "{CFAD6A01-9305-46A2-808D-B1CB6876EB37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{1A9364D4-CBB7-4999-B63E-469FDE2E54D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A9364D4-CBB7-4999-B63E-469FDE2E54D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A9364D4-CBB7-4999-B63E-469FDE2E54D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAD6A01-9305-46A2-808D-B1CB6876EB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAD6A01-9305-46A2-808D-B1CB6876EB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAD6A01-9305-46A2-808D-B1CB6876EB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAD6A01-9305-46A2-808D-B1CB6876EB37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

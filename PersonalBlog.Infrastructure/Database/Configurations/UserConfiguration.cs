@@ -12,12 +12,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasMany(u => u.Articles)
             .WithOne(a => a.Author);
-        builder.HasMany(u => u.ArticleLikes)
+        builder.HasMany(u => u.ArticleLiked)
             .WithMany(a => a.Likes);
         
         builder.HasMany(u => u.Comments)
             .WithOne(c => c.Author);
-        builder.HasMany(u => u.CommentLikes)
-            .WithMany(c => c.Likes);
     }
 }

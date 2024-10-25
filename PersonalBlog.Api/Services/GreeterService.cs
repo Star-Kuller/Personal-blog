@@ -1,6 +1,6 @@
 using Grpc.Core;
 using Microsoft.AspNetCore.Authorization;
-using Personal_blog;
+using PersonalBlogGRpc;
 
 namespace PersonalBlog.Api.Services;
 

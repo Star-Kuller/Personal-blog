@@ -5,14 +5,14 @@ namespace PersonalBlog.Domain;
 
 public class Article : CreatableEntity, IName, IAuthor
 {
-    public string Name { get; set; }
-    public string Text { get; set; }
-    public List<string> MediaUrls { get; set; } = new();
+    public string Name { get; set; } = "";
+    public string Text { get; set; }= "";
+    public List<string> MediaUrls { get; set; } = [];
     public bool IsPublished { get; set; }
-    
+
     public List<User> Likes { get; set; }
     
-    public User Author { get; set; }
+    public User? Author { get; set; }
     public long AuthorId { get; set; }
 
     public List<Comment> Comments { get; set; }

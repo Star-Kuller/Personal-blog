@@ -13,7 +13,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/wwwroot/Articles/2/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotAllChunksReceivedException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Delete.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Edit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Like.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Publish.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Unlike.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/UploadFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/PersonalBlog.GRpcAutogen.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241025002718_RemoveCommentLikes.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241025002718_RemoveCommentLikes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/protoeditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/protoeditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Personal blog.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Personal blog.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/CurrentUserFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/ICurrentUserFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/CurrentUserMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/CurrentUserMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/JwtDecoderMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/articles.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/google/api/annotations.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/google/api/http.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/greet.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/greet.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/BlogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/ArticlesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/GreeterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/GreeterService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/AlreadyExistException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/AlreadyExistException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/PermissionDeniedException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/PermissionDeniedException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/CommonQueryExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/CommonQueryExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/PagedListExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/PagedListExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Create.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/PagedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/PagedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +100,10 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/MyProjects/Personal blog/PersonalBlog.Domain/Article.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PersonalBlog.Api/obj/Debug/net8.0/Protos/Blog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/c2a442982e736e17ae6bcadbfd8ccba278ee1be6/src/Http/Http.Features/src/IHeaderDictionary.Keyed.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96b22701ce3542d68e66b33c1ae9a14f1e6620/d8/a451a05f/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ac2a88a1b8c442bf847475a5a257846a5a00/9c/aeef44bc/BCrypt.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ee39d1e9346e41aa9d44f0e1b1c6630f76268/84/49805e62/StringValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3520bf5c151bbc5aed94ba6abea697eaaee2b96fe96341613fef02be1cc54/ValidationFailure.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ebffcd2ab98c3abdcb6c2c350fb49783e75ae2d26c32d1ab7d87c9e84e4/JwtSecurityToken.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,7 +115,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -73,31 +128,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Personal blog: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Personal blog: https.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.PersonalBlog.Api: https.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;google.protobuf.language&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\MyProjects\\Personal blog\\Frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Personal blog: http.executor": "Run",
+    ".NET Launch Settings Profile.Personal blog: https.executor": "Run",
+    ".NET Launch Settings Profile.PersonalBlog.Api: https.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "google.protobuf.language",
+    "ts.external.directory.path": "C:\\MyProjects\\Personal blog\\Frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\UserD\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "rider.external.source.directories": [
+      "C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\UserD\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\UserD\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PersonalBlog.Api: https">
     <configuration name="PersonalBlog.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" />
@@ -265,6 +323,9 @@
       <workItem from="1728466592757" duration="2616000" />
       <workItem from="1728514626459" duration="3669000" />
       <workItem from="1728553763500" duration="11149000" />
+      <workItem from="1729714546998" duration="17091000" />
+      <workItem from="1729805872407" duration="7389000" />
+      <workItem from="1729813359706" duration="7961000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -394,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728565430922</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added pagedList">
+      <option name="closed" value="true" />
+      <created>1729731908428</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1729731908428</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +512,8 @@
     <MESSAGE value="Added articles and comments" />
     <MESSAGE value="Added CurrentUser" />
     <MESSAGE value="Added blog create" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added blog create" />
+    <MESSAGE value="Added pagedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pagedList" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

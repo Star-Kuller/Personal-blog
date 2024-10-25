@@ -1,6 +1,6 @@
 using PersonalBlog.Domain;
 
-namespace PersonalBlog.Core.Exception;
+namespace PersonalBlog.Core.Exceptions;
 
 public class PermissionDeniedException : System.Exception
 {

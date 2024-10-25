@@ -13,9 +13,7 @@ public static class DbInitializer
     {
         var context = services.GetRequiredService<PbDbContext>();
         var adminUserSettings = services.GetService<IOptions<AdminUser>>()?.Value;
-        if(adminUserSettings is not null) 
-            adminUserSettings.Salt = services.GetService<IOptions<TokenOptions>>()?.Value.Secret;
-        
+
         await context.Database.MigrateAsync(cancellationToken);
         
         try
@@ -58,7 +56,6 @@ public static class DbInitializer
     
     public class AdminUser
     {
-        public string? Salt { get; set; }
         public string AccountName { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }

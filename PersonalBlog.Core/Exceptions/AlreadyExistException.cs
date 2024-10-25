@@ -1,3 +1,3 @@
-namespace PersonalBlog.Core.Exception;
+namespace PersonalBlog.Core.Exceptions;
 
-public class AlreadyExistException(string massage) : System.Exception(massage);
+public class AlreadyExistException(string massage) : Exception(massage);

@@ -129,7 +129,9 @@ app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
 app.MapGrpcService<GreeterService>().EnableGrpcWeb();
 app.MapGrpcService<AuthService>().EnableGrpcWeb();
-app.MapGrpcService<BlogService>().EnableGrpcWeb();
+app.MapGrpcService<ArticlesService>().EnableGrpcWeb();
+
+app.UseStaticFiles();
 
 app.MapGet("/",
     () =>

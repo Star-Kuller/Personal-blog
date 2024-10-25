@@ -13,8 +13,5 @@ public class CommentConfiguration : IEntityTypeConfiguration<Comment>
         
         builder.HasOne(c => c.Article)
             .WithMany(a => a.Comments);
-        
-        builder.HasMany(c => c.Likes)
-            .WithMany(u => u.CommentLikes);
     }
 }

@@ -12,4 +12,8 @@ public record CurrentUser : ICurrentUser
     public Role Role { get; set; }
     public bool IsDeleted { get; set; }
     public IPAddress? IpAddress { get; set;  }
+    
+    
+    public bool IsAdmin => Role == Role.Admin;
+    public bool IsGuest => Role == Role.Guest;
 }

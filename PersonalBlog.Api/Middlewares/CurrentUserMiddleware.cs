@@ -15,11 +15,15 @@ public class CurrentUserMiddleware(RequestDelegate next,
             await next(httpContext);
             return;
         }
-        
+
         var claims = httpContext.User.Claims;
         var accountName = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
         var user = await dbContext.Users.FirstOrDefaultAsync(x => x.AccountName == accountName);
-        logger.LogInformation("Id:{UserId} Account: {UserAccountName} Role: {UserRole}", user.Id, user.AccountName, user.Role);
+        
+        logger.LogInformation(
+            "Id:{UserId} Account: {UserAccountName} Role: {UserRole}",
+            user.Id, user.AccountName, user.Role);
+        
         currentUser.Id = user.Id;
         currentUser.AccountName = user.AccountName;
         currentUser.Name = user.Name;
