@@ -13,60 +13,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Api/wwwroot/Articles/2/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotAllChunksReceivedException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Delete.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Edit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Like.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Publish.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Unlike.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/UploadFile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/PersonalBlog.GRpcAutogen.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241025002718_RemoveCommentLikes.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/20241025002718_RemoveCommentLikes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/protoeditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/protoeditor.xml" afterDir="false" />
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="Added Uploading file">
+      <change afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/RemoveFile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal blog.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Personal blog.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/CurrentUserFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/DIFactories/ICurrentUserFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Extensions/CurrentUserExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/CurrentUserMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/CurrentUserMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Middlewares/JwtDecoderMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/PersonalBlog.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/auth.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/articles.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/google/api/annotations.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/google/api/http.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Protos/greet.proto" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.GRpcAutogen/Protos/greet.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/BlogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/ArticlesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/GreeterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/GreeterService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/AlreadyExistException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/AlreadyExistException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/NotFoundException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/PermissionDeniedException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Exceptions/PermissionDeniedException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/CommonQueryExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/CommonQueryExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/PagedListExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Extensions/PagedListExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Create.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/PagedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/PagedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Blog/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/View.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Interfaces/ICurrentUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PersonalBlog.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/PipelineBehavior/ErrorHandlingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Security/CurrentUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Comment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/Common/CreatableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/ArticleConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/CommentConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Api/Services/ArticlesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Api/Services/ArticlesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/UploadFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/UploadFile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +276,7 @@
       <workItem from="1728553763500" duration="11149000" />
       <workItem from="1729714546998" duration="17091000" />
       <workItem from="1729805872407" duration="7389000" />
-      <workItem from="1729813359706" duration="7961000" />
+      <workItem from="1729813359706" duration="9928000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -463,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729731908428</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added Uploading file">
+      <option name="closed" value="true" />
+      <created>1729822279385</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1729822279385</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +472,8 @@
     <MESSAGE value="Added CurrentUser" />
     <MESSAGE value="Added blog create" />
     <MESSAGE value="Added pagedList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pagedList" />
+    <MESSAGE value="Added Uploading file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Uploading file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

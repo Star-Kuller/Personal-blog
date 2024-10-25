@@ -32,6 +32,17 @@ public class UploadFile
             var directoryPath = GetDirectory(article.Id);
             var filePath = Path.Combine(directoryPath, fileName);
 
+            var i = 1;
+            var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
+            var extension = Path.GetExtension(fileName);
+            
+            while (File.Exists(filePath))
+            {
+                fileName = $"{fileNameWithoutExtension}({i}){extension}";
+                filePath = Path.Combine(directoryPath, fileName);
+                i++;
+            }
+
             await CreateFileFromStream(stream, firstChunk, article.Id, filePath, cancellationToken);
 
             article.MediaUrls.Add(GetLink(host, article.Id, fileName));

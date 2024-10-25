@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using PersonalBlogGRpc;
 using PersonalBlog.Core.Handlers.Articles;
 using PagedList = PersonalBlog.Core.Handlers.Articles.PagedList;
+using RemoveFile = PersonalBlog.Core.Handlers.Articles.RemoveFile;
+using RemoveFileGRpc = PersonalBlogGRpc.RemoveFile;
 
 namespace PersonalBlog.Api.Services;
 
@@ -43,9 +45,9 @@ public class ArticlesService(ILogger<AuthService> logger, IMediator mediator) : 
         return new Empty();
     }
 
-    public override async Task<Empty> removeFile(RemoveFile request, ServerCallContext context)
+    public override async Task<Empty> removeFile(RemoveFileGRpc request, ServerCallContext context)
     {
-        await mediator.Send(new UploadFile.Command(null, context));
+        await mediator.Send(new RemoveFile.Command(request));
         return new Empty();
     }
 
