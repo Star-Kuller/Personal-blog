@@ -1,4 +1,4 @@
-.list{
+:host{
   display: flex;
   position: fixed;
   flex-direction: column;

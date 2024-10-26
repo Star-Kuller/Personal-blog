@@ -1,0 +1,93 @@
+:host{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.list{
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+}
+
+.card {
+  height: 350px;
+  background-color: var(--element);
+  border-radius: 2em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--element-hover);
+}
+
+.center-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  width: 70px;
+  height: 70px;
+}
+
+.card svg path {
+  fill: var(--accent);
+}
+
+.card:hover svg path {
+  fill: var(--accent-hover);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.article .text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.article h5 {
+  display: flex;
+  max-height: 2.25em;
+  overflow: clip;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.article p {
+  width: 90%;
+  overflow: clip;
+  flex-grow: 1;
+}
+
+.button{
+  height: 3em;
+  width: 60%;
+  border-radius: 1em;
+}

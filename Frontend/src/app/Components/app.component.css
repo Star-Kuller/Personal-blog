@@ -15,9 +15,9 @@ nav a {
 }
 
 .content {
+  margin-top: 8em;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: calc(100vh - 8em);
   flex-direction: column;
 }

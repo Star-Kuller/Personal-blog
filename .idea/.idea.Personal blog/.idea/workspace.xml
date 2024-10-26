@@ -13,15 +13,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Personal blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Edit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/Articles/Edit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Core/Handlers/auth/Register.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Domain/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Configurations/UserConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalBlog.Infrastructure/Migrations/PbDbContextModelSnapshot.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ee4d81eb-d820-4d84-a336-a1fabeced094" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +47,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Frontend/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PersonalBlog.Api/obj/Debug/net8.0/Protos/Blog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/MyProjects/Personal blog/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/MyProjects/Personal blog/PersonalBlog.Infrastructure/Database/Infrastructure/DbInitializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/c2a442982e736e17ae6bcadbfd8ccba278ee1be6/src/Http/Http.Features/src/IHeaderDictionary.Keyed.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96b22701ce3542d68e66b33c1ae9a14f1e6620/d8/a451a05f/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -281,7 +274,7 @@
       <workItem from="1729714546998" duration="17091000" />
       <workItem from="1729805872407" duration="7389000" />
       <workItem from="1729813359706" duration="10894000" />
-      <workItem from="1729862569623" duration="1125000" />
+      <workItem from="1729862569623" duration="1195000" />
     </task>
     <task id="LOCAL-00001" summary="First steps">
       <option name="closed" value="true" />
@@ -435,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729823947321</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="little updates of user">
+      <option name="closed" value="true" />
+      <created>1729863747965</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1729863747965</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +488,8 @@
     <MESSAGE value="Added pagedList" />
     <MESSAGE value="Added Uploading file" />
     <MESSAGE value="Added remove file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added remove file" />
+    <MESSAGE value="little updates of user" />
+    <option name="LAST_COMMIT_MESSAGE" value="little updates of user" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

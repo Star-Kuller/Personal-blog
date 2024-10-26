@@ -1,9 +1,9 @@
-.about {
+:host{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
 }
 
 .about p {
