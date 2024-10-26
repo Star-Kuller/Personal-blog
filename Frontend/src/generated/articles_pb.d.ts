@@ -150,6 +150,9 @@ export class ArticleShort extends jspb.Message {
   getLiked(): boolean;
   setLiked(value: boolean): void;
 
+  getPreviewurl(): string;
+  setPreviewurl(value: string): void;
+
   getLikescount(): number;
   setLikescount(value: number): void;
 
@@ -178,6 +181,7 @@ export namespace ArticleShort {
     title: string,
     text: string,
     liked: boolean,
+    previewurl: string,
     likescount: number,
     commentscount: number,
     ispublished: boolean,

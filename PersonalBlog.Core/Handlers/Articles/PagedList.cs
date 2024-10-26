@@ -46,7 +46,7 @@ public class PagedList
                 Page = request.Page,
                 Size = request.Size,
                 RowsCount = rowsCount,
-                TotalPages = rowsCount / request.Size
+                TotalPages = (int)Math.Ceiling((double)rowsCount / request.Size)
             };
         }
     }

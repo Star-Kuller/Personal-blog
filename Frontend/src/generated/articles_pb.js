@@ -1219,10 +1219,11 @@ proto.personalBlog.ArticleShort.toObject = function(includeInstance, msg) {
     title: jspb.Message.getFieldWithDefault(msg, 2, ""),
     text: jspb.Message.getFieldWithDefault(msg, 3, ""),
     liked: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    likescount: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    commentscount: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    ispublished: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
-    authorid: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    previewurl: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    likescount: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    commentscount: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    ispublished: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    authorid: jspb.Message.getFieldWithDefault(msg, 9, 0)
   };
 
   if (includeInstance) {
@@ -1276,18 +1277,22 @@ proto.personalBlog.ArticleShort.deserializeBinaryFromReader = function(msg, read
       msg.setLiked(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setLikescount(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPreviewurl(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readInt64());
-      msg.setCommentscount(value);
+      msg.setLikescount(value);
       break;
     case 7:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCommentscount(value);
+      break;
+    case 8:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIspublished(value);
       break;
-    case 8:
+    case 9:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setAuthorid(value);
       break;
@@ -1348,31 +1353,38 @@ proto.personalBlog.ArticleShort.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getLikescount();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getPreviewurl();
+  if (f.length > 0) {
+    writer.writeString(
       5,
       f
     );
   }
-  f = message.getCommentscount();
+  f = message.getLikescount();
   if (f !== 0) {
     writer.writeInt64(
       6,
       f
     );
   }
+  f = message.getCommentscount();
+  if (f !== 0) {
+    writer.writeInt64(
+      7,
+      f
+    );
+  }
   f = message.getIspublished();
   if (f) {
     writer.writeBool(
-      7,
+      8,
       f
     );
   }
   f = message.getAuthorid();
   if (f !== 0) {
     writer.writeInt64(
-      8,
+      9,
       f
     );
   }
@@ -1452,28 +1464,28 @@ proto.personalBlog.ArticleShort.prototype.setLiked = function(value) {
 
 
 /**
- * optional int64 likesCount = 5;
+ * optional string previewUrl = 5;
+ * @return {string}
+ */
+proto.personalBlog.ArticleShort.prototype.getPreviewurl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.personalBlog.ArticleShort} returns this
+ */
+proto.personalBlog.ArticleShort.prototype.setPreviewurl = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional int64 likesCount = 6;
  * @return {number}
  */
 proto.personalBlog.ArticleShort.prototype.getLikescount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.personalBlog.ArticleShort} returns this
- */
-proto.personalBlog.ArticleShort.prototype.setLikescount = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int64 commentsCount = 6;
- * @return {number}
- */
-proto.personalBlog.ArticleShort.prototype.getCommentscount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
@@ -1482,17 +1494,35 @@ proto.personalBlog.ArticleShort.prototype.getCommentscount = function() {
  * @param {number} value
  * @return {!proto.personalBlog.ArticleShort} returns this
  */
-proto.personalBlog.ArticleShort.prototype.setCommentscount = function(value) {
+proto.personalBlog.ArticleShort.prototype.setLikescount = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
 /**
- * optional bool isPublished = 7;
+ * optional int64 commentsCount = 7;
+ * @return {number}
+ */
+proto.personalBlog.ArticleShort.prototype.getCommentscount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.personalBlog.ArticleShort} returns this
+ */
+proto.personalBlog.ArticleShort.prototype.setCommentscount = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional bool isPublished = 8;
  * @return {boolean}
  */
 proto.personalBlog.ArticleShort.prototype.getIspublished = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
 };
 
 
@@ -1501,16 +1531,16 @@ proto.personalBlog.ArticleShort.prototype.getIspublished = function() {
  * @return {!proto.personalBlog.ArticleShort} returns this
  */
 proto.personalBlog.ArticleShort.prototype.setIspublished = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 7, value);
+  return jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
 
 /**
- * optional int64 authorId = 8;
+ * optional int64 authorId = 9;
  * @return {number}
  */
 proto.personalBlog.ArticleShort.prototype.getAuthorid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
@@ -1519,7 +1549,7 @@ proto.personalBlog.ArticleShort.prototype.getAuthorid = function() {
  * @return {!proto.personalBlog.ArticleShort} returns this
  */
 proto.personalBlog.ArticleShort.prototype.setAuthorid = function(value) {
-  return jspb.Message.setProto3IntField(this, 8, value);
+  return jspb.Message.setProto3IntField(this, 9, value);
 };
 
 

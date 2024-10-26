@@ -56,10 +56,11 @@ message ArticleShort {
   string title = 2;
   string text = 3;
   bool liked = 4;
-  int64 likesCount = 5;
-  int64 commentsCount = 6;
-  bool isPublished = 7;
-  int64 authorId = 8;
+  string previewUrl = 5;
+  int64 likesCount = 6;
+  int64 commentsCount = 7;
+  bool isPublished = 8;
+  int64 authorId = 9;
 }
 
 message ArticleInfo {
